@@ -52,33 +52,33 @@ public class ArrCharOps {
         int i = 0;
         for (; i < arr.length; i ++) {
             char C = arr [i];
-            if ( C != ch) {
-              return -1;  
+            if ( C == ch) {
+              return  i;  
             }
         }
-        return i;
+        return -1;
     }
 
     public static int indexOf(char[] arr, char ch, int fromIndex) {
          int i = fromIndex;
         for (; i < arr.length; i ++) {
             char C = arr [i];
-            if ( C != ch) {
-              return -1;  
+            if ( C == ch) {
+              return i;  
             }
         }
-        return i;
+        return -1;
     }
 
     public static int lastIndexOf(char[] arr, char ch) {
         int i = arr.length -1;
         for (; i >= 0; i --) {
             char C = arr [i];
-            if ( C != ch) {
-              return -1;  
+            if ( C == ch) {
+              return i;  
             }
         }
-        return i;
+        return -1;
     }
 
     public static char[] concat(char[] arr1, char[] arr2) {
@@ -124,7 +124,9 @@ public class ArrCharOps {
         }
         if (c1 > c2) {
             return 1;
-        }
+        } 
+    }
+
         if ( str1.length()== str2.length()) {
             return 0;
         }
@@ -133,8 +135,8 @@ public class ArrCharOps {
         } else {
             return 1;
         }
-      }  
-      return -2;
+        
+      
     }
     
 }
